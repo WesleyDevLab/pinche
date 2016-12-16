@@ -10,7 +10,8 @@
     "filp/whoops": "*",
     "phpmailer/phpmailer": "~5.2",
     "XiaoLer/blade":"*",
-    "gregwar/captcha": "*"
+    "gregwar/captcha": "*",
+    "qiniu/php-sdk":"*"
   },
   "authors": [
     {

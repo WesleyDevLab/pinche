@@ -1,14 +1,14 @@
 {{-- 继承公用视图 --}}
 @extends('Admin.Public.Public')
 
+{{-- 分配标题 --}}
+@section('title', '修改地区分类')
+
 {{-- 分配path级别路径 --}}
 @section('nav_path')
 <li><a href="javascript:void(0);">地区管理</a></li>
-<li class="active">地区添加</li>
+<li class="active">地区修改</li>
 @endsection
-
-{{-- 分配标题 --}}
-@section('title', '添加地区分类')
 
 {{-- 分配页面描述 --}}
 @section('description', '..')
@@ -18,26 +18,29 @@
     <div class="col-lg-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                地区分类添加
+                地区分类修改
             </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-lg-12">
                         <form method="post" role="form">
                             <div class="form-group">
-                                <label>地区名称</label>
-                                <input name="name" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>父级地区</label>
-                                <select name="pid" class="form-control">
-                                    <option value="0">根地区</option>
-                                    @foreach($data as $value)
-                                    <option value="{{$value['id']}}">{{$value['name']}}</option>
+                                <label>出发地</label>
+                                <select name="start" class="form-control">
+                                    @foreach($address as $value)
+                                    <option @if($value['id'] == $data['start']) selected @endif value="{{$value['id']}}">{{$value['name']}}</option>
                                     @endforeach
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary">添加用户</button>
+                            <div class="form-group">
+                                <label>目的地</label>
+                                <select name="end" class="form-control">
+                                    @foreach($address as $value)
+                                    <option @if($value['id'] == $data['end']) selected @endif value="{{$value['id']}}">{{$value['name']}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">修改用户</button>
                             <button type="reset" class="btn btn-danger">重置表单</button>
                         </form>
                     </div>

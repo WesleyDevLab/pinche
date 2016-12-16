@@ -12,7 +12,7 @@ class AddressController extends Base{
   public function index(){
   	$data = M('address') -> select('*',DB::raw('CONCAT(path,",",id) a')) -> orderBy('a') -> get() -> toArray();
   	$one = M('address') -> where(['pid'=>'0']) -> get() -> toArray();
-  	// 处理
+  	// 处理地区级别缩进
   	foreach($data as $key => $value){
   		$data[$key]['name'] = '|'.str_repeat('|----',substr_count($value['path'],',')).$value['name'];
   	}
@@ -20,7 +20,7 @@ class AddressController extends Base{
   }
   public function add(){
   	$data = M('address') -> get() -> toArray();
-  	// 处理
+  	// 处理地区级别缩进
   	foreach($data as $key => $value){
   		$data[$key]['name'] = '|'.str_repeat('----',substr_count($value['path'],',')).$value['name'];
   	}
@@ -49,7 +49,7 @@ class AddressController extends Base{
   }
   public function edit(){
   	$address = M('address') -> select('*',DB::raw('CONCAT(path,",",id) a')) -> orderBy('a') -> get() -> toArray();
-  	// 处理
+  	// 处理地区级别缩进
   	foreach($address as $key => $value){
   		$address[$key]['name'] = '|'.str_repeat('----',substr_count($value['path'],',')).$value['name'];
   	}
@@ -85,7 +85,7 @@ class AddressController extends Base{
   public function show(){
   	$data = M('address') -> where(['pid'=>$_GET['id']]) -> select('*',DB::raw('CONCAT(path,",",id) a')) -> orderBy('a') -> get() -> toArray();
   	$pdata = M('address') -> find($_GET['id']) -> toArray();
-  	// 处理
+  	// 处理地区级别缩进
   	foreach($data as $key => $value){
   		$data[$key]['name'] = '|'.str_repeat('|----',substr_count($value['path'],',')).$value['name'];
   	}

@@ -38,11 +38,39 @@ Route::get('/Admin/User/add.html','Admin\UserController@add');
 // 执行用户添加
 Route::post('/Admin/User/add.html','Admin\UserController@insert');
 // 用户修改
-Route::get('/Admin/User/edit.html','Admin\UserController@index');
+Route::get('/Admin/User/edit.html','Admin\UserController@edit');
 // 执行用户修改
 Route::post('/Admin/User/edit.html','Admin\UserController@save');
 // 用户删除
 Route::post('/Admin/User/delete.html','Admin\UserController@delete');
+
+
+// 路线列表
+Route::get('/Admin/Line/lists.html','Admin\LineController@index');
+// 路线添加
+Route::get('/Admin/Line/add.html','Admin\LineController@add');
+// 执行路线添加
+Route::post('/Admin/Line/add.html','Admin\LineController@insert');
+// 路线修改
+Route::get('/Admin/Line/edit.html','Admin\LineController@edit');
+// 执行路线修改
+Route::post('/Admin/Line/edit.html','Admin\LineController@save');
+// 路线删除
+Route::post('/Admin/Line/delete.html','Admin\LineController@delete');
+
+
+// 车辆列表
+Route::get('/Admin/Cart/lists.html','Admin\CartController@index');
+// 车辆添加
+Route::get('/Admin/Cart/add.html','Admin\CartController@add');
+// 执行路车辆加
+Route::post('/Admin/Cart/add.html','Admin\CartController@insert');
+// 车辆修改
+Route::get('/Admin/Cart/edit.html','Admin\CartController@edit');
+// 执行车辆修改
+Route::post('/Admin/Cart/edit.html','Admin\CartController@save');
+// 车辆删除
+Route::post('/Admin/Cart/delete.html','Admin\CartController@delete');
 
 
 

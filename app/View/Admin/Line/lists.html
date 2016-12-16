@@ -2,16 +2,13 @@
 @extends('Admin.Public.Public')
 
 {{-- 分配标题 --}}
-@section('title', '用户列表')
+@section('title', '路线分类列表')
 
 {{-- 分配path级别路径 --}}
 @section('nav_path')
-<li><a href="javascript:void(0);">用户管理</a></li>
-<li class="active">用户列表</li>
+<li><a href="javascript:void(0);">路线管理</a></li>
+<li class="active">路线列表</li>
 @endsection
-
-{{-- 分配描述 --}}
-@section('description', '..')
 
 @section('content')
 
@@ -19,35 +16,31 @@
     <div class="col-md-12">
         <!-- Advanced Tables -->
         <div class="panel panel-default">
-            <div class="panel-heading">
-                 全部用户列表
-            </div>
             <div class="panel-body">
                 <div class="table-responsive">
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>用户名</th>
-                                <th>邮箱</th>
-                                <th>手机号</th>
-                                <th>真实姓名</th>
+                                <th>出发地</th>
+                                <th>目的地</th>
+                                <th>状态</th>
                                 <th>操作</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($data as $value)
+                                @foreach($data as $value)
                             <tr class="odd gradeX">
                                 <td>{{$value['id']}}</td>
-                                <td>{{$value['username']}}</td>
-                                <td>{{$value['email']}}</td>
-                                <td class="center">{{$value['truename']}}</td>
+                                <td>{{$value['start']}}</td>
+                                <td>{{$value['end']}}</td>
+                                <td>{{$value['status']}}</td>
                                 <td class="center">
-                                    <a href="/Admin/User/edit.html?id={{$value['id']}}" class="btn btn-primary">修改</a>
-                                    <a href="/Admin/User/delete.html?id={{$value['id']}}" class="btn btn-danger">删除</a>
+                                    <a href="/Admin/Line/edit.html?id={{$value['id']}}" class="btn btn-primary">修改</a>
+                                    <a href="/Admin/Line/delete.html?id={{$value['id']}}" class="btn btn-danger">删除</a>
                                 </td>
                             </tr>
-                            @endforeach
+                                @endforeach
                         </tbody>
                     </table>
                 </div>

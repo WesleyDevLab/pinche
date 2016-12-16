@@ -24,6 +24,7 @@ class LoginController extends Controller{
       if( $user = M('admin')->where(['username'=>$_POST['username'],'password'=>md5($_POST['password'])])->first()->toArray() ){
           // 记录登录信息
           $_SESSION['admin']['user'] = $user;
+          $_SESSION['admin']['user']['permissions'] = explode($_SESSION['admin']['user'],',');
           $this -> ajaxReturn(['status'=>0,'message'=>'登录成功']);
       }else{
           $this -> ajaxReturn(['status'=>1,'message'=>'登录失败']);

@@ -10,7 +10,7 @@ Target Server Type    : MariaDB
 Target Server Version : 100028
 File Encoding         : 65001
 
-Date: 2016-12-16 17:28:13
+Date: 2016-12-21 08:18:52
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -78,7 +78,7 @@ CREATE TABLE `cart` (
 -- ----------------------------
 -- Records of cart
 -- ----------------------------
-INSERT INTO `cart` VALUES ('4', '3', '1', 'http://oi9n5eegf.bkt.clouddn.com/14818750503184426934', '-1', '2016-12-16 08:27:47', '2016-12-16 07:57:35');
+INSERT INTO `cart` VALUES ('4', '3', '1', 'http://oi9n5eegf.bkt.clouddn.com/14818750503184426934', '2', '2016-12-16 11:04:21', '2016-12-16 07:57:35');
 
 -- ----------------------------
 -- Table structure for code
@@ -130,7 +130,7 @@ CREATE TABLE `log` (
   `url` char(255) COLLATE utf8_unicode_ci NOT NULL,
   `time` char(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=344 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=425 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of log
@@ -478,6 +478,87 @@ INSERT INTO `log` VALUES ('340', '访问日志', 'WEB访问日志', '', '192.168
 INSERT INTO `log` VALUES ('341', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Welcome/index.html', '2016-12-16 08:44:21');
 INSERT INTO `log` VALUES ('342', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/User/edit.html?status=success&message=%E4%BF%AE%E6%94%B9%E6%88%90%E5%8A%9F&description=%E7%94%A8%E6%88%B7%E4%BF%AE%E6%94%B9%E6%88%90%E5%8A%9F&id=1', '2016-12-16 08:44:24');
 INSERT INTO `log` VALUES ('343', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Cart/lists.html', '2016-12-16 08:44:29');
+INSERT INTO `log` VALUES ('344', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Login.html', '2016-12-16 10:41:07');
+INSERT INTO `log` VALUES ('345', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Code.html', '2016-12-16 10:41:07');
+INSERT INTO `log` VALUES ('346', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Login.html', '2016-12-16 11:03:35');
+INSERT INTO `log` VALUES ('347', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Code.html', '2016-12-16 11:03:35');
+INSERT INTO `log` VALUES ('348', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Code.html?id=0.4709860649126141', '2016-12-16 11:03:41');
+INSERT INTO `log` VALUES ('349', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Code.html?id=0.7941571090808979', '2016-12-16 11:03:42');
+INSERT INTO `log` VALUES ('350', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Code.html?id=0.36467206338293456', '2016-12-16 11:03:42');
+INSERT INTO `log` VALUES ('351', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Code.html?id=0.022576038529590337', '2016-12-16 11:03:44');
+INSERT INTO `log` VALUES ('352', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Code.html?id=0.08440036339214974', '2016-12-16 11:03:45');
+INSERT INTO `log` VALUES ('353', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Login.html', '2016-12-16 11:03:52');
+INSERT INTO `log` VALUES ('354', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Welcome/index.html', '2016-12-16 11:03:54');
+INSERT INTO `log` VALUES ('355', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Cart/lists.html', '2016-12-16 11:03:56');
+INSERT INTO `log` VALUES ('356', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Line/lists.html', '2016-12-16 11:03:58');
+INSERT INTO `log` VALUES ('357', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/User/lists.html', '2016-12-16 11:04:03');
+INSERT INTO `log` VALUES ('358', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Address/lists.html', '2016-12-16 11:04:04');
+INSERT INTO `log` VALUES ('359', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Cart/lists.html', '2016-12-16 11:04:10');
+INSERT INTO `log` VALUES ('360', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Cart/edit.html?id=4', '2016-12-16 11:04:15');
+INSERT INTO `log` VALUES ('361', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Cart/edit.html?id=4', '2016-12-16 11:04:21');
+INSERT INTO `log` VALUES ('362', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Cart/edit.html?status=success&message=%E4%BF%AE%E6%94%B9%E6%88%90%E5%8A%9F&description=%E8%BD%A6%E8%BE%86%E4%BF%AE%E6%94%B9%E6%88%90%E5%8A%9F&id=4', '2016-12-16 11:04:21');
+INSERT INTO `log` VALUES ('363', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Cart/lists.html', '2016-12-16 11:04:23');
+INSERT INTO `log` VALUES ('364', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Cart/lists.html', '2016-12-16 11:04:25');
+INSERT INTO `log` VALUES ('365', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Cart/lists.html', '2016-12-16 11:04:26');
+INSERT INTO `log` VALUES ('366', '访问日志', 'WEB访问日志', '', '192.168.1.109', '/Admin/Cart/edit.html?id=4', '2016-12-16 11:04:27');
+INSERT INTO `log` VALUES ('367', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/Admin/Login.html', '2016-12-19 00:56:13');
+INSERT INTO `log` VALUES ('368', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/Admin/Code.html', '2016-12-19 00:56:13');
+INSERT INTO `log` VALUES ('369', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/', '2016-12-19 00:56:56');
+INSERT INTO `log` VALUES ('370', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/Admin/Login.html', '2016-12-19 00:57:05');
+INSERT INTO `log` VALUES ('371', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/Admin/Code.html', '2016-12-19 00:57:05');
+INSERT INTO `log` VALUES ('372', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/Admin/Login.html', '2016-12-19 03:01:42');
+INSERT INTO `log` VALUES ('373', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/Admin/Code.html', '2016-12-19 03:01:45');
+INSERT INTO `log` VALUES ('374', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/Admin/Code.html?id=0.6643115878481591', '2016-12-19 03:03:19');
+INSERT INTO `log` VALUES ('375', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/Admin/Code.html?id=0.3704355746267838', '2016-12-19 03:03:19');
+INSERT INTO `log` VALUES ('376', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/', '2016-12-19 03:42:05');
+INSERT INTO `log` VALUES ('377', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/', '2016-12-19 03:56:09');
+INSERT INTO `log` VALUES ('378', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aa', '2016-12-19 04:06:40');
+INSERT INTO `log` VALUES ('379', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aa', '2016-12-19 04:06:47');
+INSERT INTO `log` VALUES ('380', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa', '2016-12-19 04:08:04');
+INSERT INTO `log` VALUES ('381', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa', '2016-12-19 04:08:06');
+INSERT INTO `log` VALUES ('382', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa', '2016-12-19 04:08:44');
+INSERT INTO `log` VALUES ('383', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa', '2016-12-19 04:09:47');
+INSERT INTO `log` VALUES ('384', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa', '2016-12-19 04:09:48');
+INSERT INTO `log` VALUES ('385', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aa', '2016-12-19 04:09:51');
+INSERT INTO `log` VALUES ('386', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aa', '2016-12-19 04:16:25');
+INSERT INTO `log` VALUES ('387', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa', '2016-12-19 04:27:07');
+INSERT INTO `log` VALUES ('388', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa', '2016-12-19 04:27:07');
+INSERT INTO `log` VALUES ('389', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa', '2016-12-19 04:27:20');
+INSERT INTO `log` VALUES ('390', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa', '2016-12-19 04:27:20');
+INSERT INTO `log` VALUES ('391', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=home', '2016-12-19 04:27:41');
+INSERT INTO `log` VALUES ('392', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa?a=home', '2016-12-19 04:27:41');
+INSERT INTO `log` VALUES ('393', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=home', '2016-12-19 04:27:49');
+INSERT INTO `log` VALUES ('394', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=home1', '2016-12-19 04:28:28');
+INSERT INTO `log` VALUES ('395', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa?a=home1', '2016-12-19 04:28:28');
+INSERT INTO `log` VALUES ('396', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=home', '2016-12-19 04:28:32');
+INSERT INTO `log` VALUES ('397', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:28:59');
+INSERT INTO `log` VALUES ('398', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:28:59');
+INSERT INTO `log` VALUES ('399', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:29:18');
+INSERT INTO `log` VALUES ('400', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:30:00');
+INSERT INTO `log` VALUES ('401', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:30:34');
+INSERT INTO `log` VALUES ('402', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=home', '2016-12-19 04:30:42');
+INSERT INTO `log` VALUES ('403', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=home', '2016-12-19 04:30:46');
+INSERT INTO `log` VALUES ('404', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=home', '2016-12-19 04:31:02');
+INSERT INTO `log` VALUES ('405', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=home', '2016-12-19 04:31:03');
+INSERT INTO `log` VALUES ('406', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=home', '2016-12-19 04:31:04');
+INSERT INTO `log` VALUES ('407', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:31:08');
+INSERT INTO `log` VALUES ('408', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:31:08');
+INSERT INTO `log` VALUES ('409', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:31:11');
+INSERT INTO `log` VALUES ('410', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:31:12');
+INSERT INTO `log` VALUES ('411', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:31:28');
+INSERT INTO `log` VALUES ('412', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:31:28');
+INSERT INTO `log` VALUES ('413', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:31:30');
+INSERT INTO `log` VALUES ('414', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:31:30');
+INSERT INTO `log` VALUES ('415', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:31:40');
+INSERT INTO `log` VALUES ('416', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:31:40');
+INSERT INTO `log` VALUES ('417', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=home', '2016-12-19 04:31:47');
+INSERT INTO `log` VALUES ('418', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aa', '2016-12-19 04:31:59');
+INSERT INTO `log` VALUES ('419', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=home', '2016-12-19 04:32:03');
+INSERT INTO `log` VALUES ('420', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=home', '2016-12-19 04:32:04');
+INSERT INTO `log` VALUES ('421', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:32:07');
+INSERT INTO `log` VALUES ('422', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:32:07');
+INSERT INTO `log` VALUES ('423', '访问日志', 'WEB访问日志', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:32:08');
+INSERT INTO `log` VALUES ('424', '访问日志', '找不到路由', '', '192.168.1.105', '/aaa?a=get_code', '2016-12-19 04:32:09');
 
 -- ----------------------------
 -- Table structure for order
@@ -514,8 +595,8 @@ CREATE TABLE `session` (
 -- ----------------------------
 -- Records of session
 -- ----------------------------
-INSERT INTO `session` VALUES ('9ou0jkthbsf684r5mn3qnk8q57', 'admin|a:2:{s:4:\"code\";s:5:\"ju7bn\";s:4:\"user\";a:6:{s:2:\"id\";i:1;s:8:\"username\";s:7:\"itxiao6\";s:8:\"password\";s:32:\"a46da1ad6aac4605b22621068816e21c\";s:11:\"permissions\";N;s:10:\"updated_at\";N;s:10:\"created_at\";N;}}', '192.168.1.109', '1481876144');
-INSERT INTO `session` VALUES ('sutjsvalgfiusv764a4ss4vn10', 'admin|a:2:{s:4:\"code\";s:5:\"bi522\";s:4:\"user\";a:6:{s:2:\"id\";i:1;s:8:\"username\";s:7:\"itxiao6\";s:8:\"password\";s:32:\"a46da1ad6aac4605b22621068816e21c\";s:11:\"permissions\";N;s:10:\"updated_at\";N;s:10:\"created_at\";N;}}', '192.168.1.109', '1481877869');
+INSERT INTO `session` VALUES ('0fbe0inneudspmboiq14k666k3', '', '192.168.1.105', '1482121929');
+INSERT INTO `session` VALUES ('215drtehoco8i3eaev5qe69c91', '', '192.168.1.105', '1482120716');
 
 -- ----------------------------
 -- Table structure for users
